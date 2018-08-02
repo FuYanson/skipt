@@ -1,0 +1,871 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,dl,ol,figure,dd,input,input{
+    margin: 0;
+    padding: 0;
+}
+img{
+    vertical-align: top;
+    border: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.clear{
+    display: block;
+    content: "";
+    clear: both;
+}
+// 盒子
+html,body{
+    width: 100%;
+}
+
+// 公共样式
+
+.wrap{
+    margin: 0 auto;
+}
+.header{
+    // 背景撑满整屏
+    width: 100%;
+    height: 1139px;
+    background: url('../img/nav1.jpg')repeat-y;
+    background-size: 100%;
+}
+// 头部导航
+.nav{
+    width: 100%;
+    position: fixed;
+    height: 83px;
+    right: 0;
+    // background: #fff;
+  
+    top: 0;
+    z-index: 999;
+    // 标题
+    h1{
+    position: fixed;
+        top: 0;
+        left: 16px;
+        background: url('../img/h1.png')no-repeat;
+        font-size: 0;
+        height: 83px;
+        width: 153px;
+    }
+    // 按钮显示，隐藏
+    .nav_a{
+        position: relative;
+        input{
+            // display: none;
+            position: absolute;
+            right: 16px;
+            top: 34px;
+            border: none;
+            width: 20px;
+            height: 20px;
+            outline: none;
+            // 清楚默认样式，区域块。
+            -webkit-appearance:none;
+        }
+       
+        #nav2:checked{
+            background: url('../img/nav2_2.png')no-repeat;
+            
+            // 显示被隐藏的导航
+            +label{
+                display: block;
+            }
+        }
+        input:nth-of-type(2){
+            background: url('../img/nav2.png')no-repeat;
+        }
+        // 隐藏样式
+         label{
+            display: none;
+        }
+        // 显示内容
+        .nav2_none{
+                ul{
+                    position: fixed;
+                    width: 100vw;
+                    top: 83px;
+                    left: 0;
+                    li{
+                    
+                        height: 41px;
+                        line-height: 41px;
+                        background: #292929;
+                        border-bottom: 1px solid #2b2b2b;
+                        a{
+                            font-size: 12px;
+                            color: #999794;
+                            padding-left: 14px;
+                        }
+                    }
+                }
+            }
+
+    }
+
+    // 中大等屏显示
+    .nav_ul{
+        display: none;
+        font-size: 0;
+        position:fixed;
+        right:104px;
+        top: 0;
+        height: 83px;
+        line-height: 83px;
+        li{
+            a{
+                 color: #fff;
+                font-size: 14px;
+                padding-left: 28px;
+            }
+        }
+    }
+}
+
+// 手机介绍
+.content{
+    // height: 326px;
+    padding-top: 196px;
+    .c_left{
+        float: left;
+        margin-bottom: 44px;
+        
+    }
+    .c_span{
+        height: 45px;
+        width: 57px;
+        border-radius: 28px;
+        background: #db6f56;
+        text-align: center;
+        padding-top: 15px;
+        margin-bottom: 13px;
+        span{
+            display:inline-block;
+            width: 34px;;
+            height: 34px;
+            background: url('../img/c_span.png')no-repeat ;
+        }
+    }
+    h2{
+        font-size: 42px;
+        color: #f9f0dc;
+        font-weight: normal;
+        margin-bottom: 26px;
+        margin-left: 28px;
+        strong{
+            color: #ffffff;
+
+        }
+    }
+    p{
+        color: #daefea;
+        margin-left: 28px;
+        margin-bottom: 42px;
+    }
+    .c_img{
+        font-size: 0;
+        img{
+        margin-left: 28px;
+          
+        }
+    }
+  
+}
+    // 中大屏幕横向显示手机
+.c_right{
+    // width: 390px;
+    width: 100%;
+    height: 715px;
+    background: url('../img/c_right.png')no-repeat;
+    background-size: 100%;
+    float: left;
+    font-size: 0;
+}
+// 文档，标题
+.skipt{
+   word-wrap:break-word;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 77px;
+    h2{
+        color: #404040;
+        font-size: 42px;
+        font-weight: normal;
+    }
+    strong{
+        color: #404040;
+        margin-top:19px;
+        margin-bottom: 30px;
+        font-size: 42px;
+    }
+    span{
+        width: 80px;
+        display: block;
+        border-bottom:5px solid #db6f6a;
+        margin: 0 auto;
+        
+    }
+    p{
+        margin-top: 25px;
+        color: #868686;
+        font-size: 14px;
+        margin-bottom: 153px;
+    }
+    em{
+        font-style: normal;
+        font-size: 42px;
+        color: #404040;
+    }
+}
+// 布局方式
+.get{
+    // 空盒子拉开距离
+    // .get-none{
+    // height: 141px;
+    // width: 100%;
+    // background: #fff;
+    // font-size: 0;
+    // }
+    // 包含盒子
+    .get_div{
+        // width: 390px;
+        height: 600px;
+        margin: 0 auto;
+    }
+    // 样式祖父级
+    .get_ul{
+
+        // 样式父级
+        .get_li{
+                float: left;
+                width: 100%;
+                // background: #ccc;
+                height: 510px;
+                margin-top: 85px;
+            &:nth-of-type(2){
+               
+                background:url('../img/logo.jpg')no-repeat;
+                background-size:100%;
+                margin: 0;
+            }
+            // 子集ul
+            .g_u{
+                // 子集内容li
+                .g_li{
+                    position: relative;
+                    padding-right: 89px;
+                    text-align: right;
+                    margin-bottom: 40px;
+                    h3{
+                        line-height: 40px;
+                        height: 40px;
+                        font-size: 14px;
+                        color:#404040;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 400;
+                        box-sizing: border-box;
+
+                    }
+                    p{
+                        line-height: 20px;
+                        color: #868686;
+                        font-size: 13px;
+                        font-weight: 300;
+                        padding-left: 28px;
+                    }
+                    span{
+                        display: inline-block;
+                        position: absolute;
+                        right: 15px;
+                        top: 8px;
+                        border-radius: 29px;
+                        height: 58px;
+                        width: 58px;
+                        border: 1px solid #de7c78;
+                        box-shadow:
+                        inset 0px 0px 0px 3px #fff;
+                        background: #db6f6a url('../img/sange_span.png')no-repeat center;
+                        &:hover{
+                            background: #fff url('../img/sange_span2.png')no-repeat center;
+                        }
+                    }
+                }
+            }
+              &:nth-of-type(3){
+                .g_li{
+                    text-align: left;
+                    padding-right: 0px;
+                    padding-left: 89px;
+                    p{
+                        padding-left: 0;
+                        padding-right: 28px;
+                    }
+                    span{
+                        left: 15px;
+                        top: 8px;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+// 瀑布流
+.waterfall{
+    background: #f6f8fa;
+    // width: 390px;
+    margin: 0 auto;
+   
+    // 等高布局
+     ul{
+            overflow: hidden;
+        &:nth-of-type(1){
+            // display: none;
+        }
+        li{
+            float: left;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            padding-left: 40px;
+            padding-bottom: 999px;
+            margin-bottom: -999px;
+            padding-right: 40px;
+            h4{
+                color: #404040;
+                font-size: 18px;
+                font-weight: normal;
+                margin-bottom: 13px;
+            }
+            p{
+                color: #868686;
+                font-family: 'Roboto', sans-serif;
+                font-size: 13px;
+                line-height: 20px;
+                margin-bottom:68px;
+            }
+            img{
+                margin-bottom: 38px;
+            }
+         }
+
+    }
+}
+
+// 保留输入格式
+.skipt2{
+    p{
+        // padding: 0 100px;
+        white-space: pre-wrap;
+    }
+}
+
+// 图片介绍
+.picture{
+    // width: 390px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    .picture_ul{
+        li{
+            width: 100%;
+            float: left;
+            text-align: center;
+            margin-top: 30px;
+            border:2px solid #ebebeb;
+            padding: 6px;
+                box-sizing: border-box;
+            
+        }
+        a{
+           float:left;
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+                vertical-align: top;
+                border: 1px solid #EBEBEB;
+                box-shadow: none;
+                background-size: 100%;
+                box-sizing: border-box;
+                
+            }
+        }
+    }
+}
+
+// 轮播图
+.two{
+    width: 100%;
+    height: 600px;
+    background: url('../img/parallax-two.jpg')repeat-y;
+    background-size: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    .two_top{
+        // padding: 0 310px;
+        margin: 0 auto;
+        height: 100%;
+        box-sizing: border-box;
+        text-align: center;
+
+        .two_name{
+            margin-top: 58px;
+            overflow: hidden;
+            margin:  0 auto;
+            // background: red;
+            ul{
+            //    width: 1170px;
+            // height: 600px;
+            width: 300%;
+            border: 10 solid #fff;
+            background:#000;
+            }
+            li{
+                animation:sa 5s 1.5s infinite normal;
+                width: 33.3%;
+                float: left;
+                h4{
+                    margin: 58px 0 47px 0;
+                    color: #fff;
+                }
+                h3{
+                    margin: 0;
+                    padding: 0;
+                    color: #cc6f63;
+                    margin-top: 25px;
+                    em{
+                        color: #e9ffd9;
+                        font-style: normal;
+                        margin-right: 3px;
+                    }
+                }
+                p{
+                    margin: 0;
+                    padding: 0;
+                    color: #fffffc;
+                 
+                }
+            }
+        }
+    }
+
+    // 文档
+    .skipt{
+        margin: 0 auto;
+        padding-top: 109px;
+        h2{
+            width: 100%;
+            padding-bottom: 30px;
+            color: #9ba2a9;
+             strong{
+                 color: #fff;
+             }
+             em{
+                color: #fff;
+             }
+        }
+
+    }
+    .c10{
+        width:74px;
+        margin: 0 auto;
+        height: 25px;
+        text-align: center;
+        position: relative;
+        .c10_1{
+            margin-top: 23px;
+         li{
+            text-align: center;
+         }
+         input{
+             display: none;
+             &:checked ~div{
+                display: block;
+             }
+        }
+        .c_10{
+            label{
+            position: absolute;
+            top: 0;
+            left:0;
+            background: #db6f6a url('../img/c_10.png') no-repeat center;
+            height: 25px;
+            width: 25px;
+            z-index: 111;
+                &:hover{
+                     background: #000 url('../img/c_10.png') no-repeat center;
+                }
+        }
+         }
+         div{
+             display: none;
+             position: absolute;
+        }
+       .c11{
+           label{
+                background: #db6f6a url('../img/c11.png') no-repeat center;
+                right: 0;
+                position: absolute;
+                top: 0;
+                height: 25px;
+                width: 25px;
+                z-index: 111;
+                &:hover{
+                background: #000 url('../img/c11.png') no-repeat center;
+
+                }
+           }
+       }
+     }
+    }
+
+}  
+ @keyframes sa{
+       0%{
+           transform: translateX(0);
+
+       }
+       50%{
+            transform: translateX(-100%);
+       }
+       
+       100%{
+            transform: translateX(-200%);
+       }
+   }
+
+    .h4{
+        margin-top: 54px;
+        img{
+        margin-bottom: 92px;
+          
+            &:hover{
+            background: rgba(0, 0, 0, .5);
+            border-radius: 12px;
+            }
+         }
+    }
+ // 点击按钮，上下挤开
+ .fqs{
+    width: 100%;
+    margin-bottom: 105px;    
+    .what{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+        padding-top: 20px;
+        box-sizing: border-box;
+        li{
+            position: relative;
+            &:hover span{
+                
+                }
+           
+            label{
+                display: block;
+                margin-top: 15px;
+                padding: 14px 0 16px 0;
+                background: #f8f8f8;
+                border: 1px solid #e4e4e4;
+                color: #404040;
+                padding-left: 43px;
+                  
+                span{
+                    position: absolute;
+                    height: 14px;
+                    width: 14px;
+                    left: 12px;
+                    top:25px;
+                    background: url('../img/xun2.png')no-repeat ;
+                       
+                    &::before{
+                        width: 14px;
+                        height: 14px; 
+                        display: block;
+                        content: '';
+                        clear: both;
+                        background: url('../img/xun.png')no-repeat center;
+                        position: absolute;
+                        top:-5px;
+                    
+                    }
+                  
+                }
+
+            }
+            div{
+                padding-top: 10px;
+                font-size: 12px;
+                display: none;
+            } 
+            input{
+            display: none;
+                &:checked~div{
+                    display: block;
+                    
+                } 
+                &:checked >span{
+                        background: none;
+                        height: 5555px;
+                    }
+            }
+        }
+    }
+}
+
+.foot{
+
+    margin: 0 auto;
+    background: #2b2b2b;
+    overflow: hidden;
+    ul{
+        height: 300px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        li{
+            padding-left: 10px;
+            margin: 0 auto;
+            // 需要替换
+            width:100%;
+            float: left;
+            box-sizing: border-box;
+            color: #999;
+            p{
+                margin-top: 60px;
+                margin-bottom: 20px;
+                color: #ccc;
+            }
+            span{
+                display: block;
+                margin-bottom: 13px;
+            }
+            a{
+                display: block;
+                color: #db6f69;
+            }
+        }
+    }
+}
+.f_bottom{
+    background: #242424;
+   .b_bottom {
+    height: 51px;
+    padding-top: 17px;
+    border-top: 1px solid #222222;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 12px;
+   }
+    p{
+        float: left;
+        width: 50%;
+        padding-top: 17px;
+    }
+    .f_right{
+        float: right;padding-top: 17px;
+        width: 50%;
+        a{
+            color:#868888;
+            font-size: 12px;
+            display: block;
+            float: left;
+            padding: 5px 8px;
+            border-right: 1px solid #444444;
+            &:hover{
+                color: #db6f56;
+            }
+            &:nth-of-type(6){
+                border: none;
+
+            }
+        }
+    }
+}
+
+// 最小屏，媒询
+@media all and (max-width:390px){
+    // 导航栏
+    .nav{
+        background-color:#fff ;
+    }
+    .wrap{
+        margin: 0 auto;
+    }
+    .get_li{
+       width: 100%;
+   }
+}
+
+// 中等屏，媒询
+@media all and (min-width:884px){
+    #box{
+        // 更改头部限定高度
+        .header{
+            height: 625px;
+        }
+        // 更改导航栏宽度
+       .nav{
+            width: 100%;
+            margin: 0 auto;
+            background:#fff url('../img/h1.png')no-repeat 105px center;
+            h1{
+                display: none;
+            }
+        }
+        //  小屏幕盒子隐藏
+        .nav_a{
+            display: none;
+        }
+        // 替换导航栏
+        .nav_ul{
+            display: block;
+            a{
+               color: #777;
+                &:hover{
+                    color: #db6f56;
+                }
+                &:nth-of-type(1){
+                    color: #db6f56;
+                }
+            }
+        }
+        // 手机介绍
+        .c_left{
+            margin-right: 40px;
+            // margin-left: 80px;
+        }
+        .c_right{
+        width: 296px;
+        height: 469px;
+        }
+        // 调试居中
+        .wrap{
+        margin: 0 auto;
+        // width: 880px;
+        }
+        // 文档标题
+        .skipt{
+        width: 669px;
+        }
+        .get_li{
+        width: 33.3%;
+         &:nth-of-type(2){
+                // height: 1120px; 
+            }
+        }
+        .get_div{
+            width: 884px;
+            margin: 0 auto;
+        }
+
+        .waterfall{
+            width: 884px;
+            margin: 0 auto;
+            ul{ 
+              width: 100%;
+                li{
+                    width: 33.3%;
+                }
+            }
+        }
+        .picture_ul{
+         li{
+             width: 25%;      
+            }
+        }
+        .picture{
+            width: 884px;
+            .picture_ul{
+                li{
+                    width: 20%;
+                    margin: 15px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .what{
+             width: 345px;
+         }
+         .foot{
+             ul{
+                li{
+                    width: 33.3%;
+                    padding-left: 56px;
+                }
+            }
+        }
+    }
+}
+
+
+
+// 大屏幕，媒询
+@media all and (min-width:1348px) {
+    #box{
+        .nav{
+            background:#fff url('../img/h1.png')no-repeat 105px center;
+            
+        }
+        .header{
+            height: 773px;
+        }
+        .c_left{
+            margin-right: 200px;
+        }
+        .wrap{
+            margin: 0 auto;
+            width: 1348px;
+        }
+        .skipt{
+            // width: 1050px;
+        }
+        .c_left{
+            margin-left: 80px;
+        }
+        .c_right{
+            width: 360px;
+            height: 576px;
+        }
+        .get_li{
+            width: 33.3%;
+            &:nth-of-type(2){
+                height: 632px; 
+                background-position:0 -25px;
+            }
+         
+        }
+        .get_div{
+            width: 1349px;
+            margin: 0 auto;
+        }
+         .waterfall{
+             width: 1349px;
+             margin: 0 auto;
+         }
+         .what{
+             width: 580px;
+         }
+         .foot{
+             ul{
+               width: 1349px;  
+               li{
+                   padding-left: 104px;
+               }
+             }
+             
+         }
+         .b_bottom{
+             width:1349px;
+             padding: 0 104px;
+         }
+    }
+    
+}
